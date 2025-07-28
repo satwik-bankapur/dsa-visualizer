@@ -3,15 +3,26 @@ const visualizeBtn = document.getElementById('visualizeBtn');
 const visualization = document.getElementById('visualization');
 
 function detectAlgorithm(code) {
+    // Convert to lowercase for easier detection
     const lowerCode = code.toLowerCase();
 
+    // Check for binary search
     if (lowerCode.includes('left') && lowerCode.includes('right') && lowerCode.includes('mid')) {
         return 'Binary Search';
     }
 
+    // Check for two pointers
+    if (lowerCode.includes('left') && lowerCode.includes('right') && lowerCode.includes('while')) {
+        return 'Two Pointers';
+    }
+
+    // Check for sorting
+    if (lowerCode.includes('sort') || (lowerCode.includes('for') && lowerCode.includes('swap'))) {
+        return 'Sorting Algorithm';
+    }
+
     return 'Unknown Algorithm';
 }
-
 function visualizeBinarySearch() {
     const steps = [
         "Initialize: left = 0, right = array.length - 1",
