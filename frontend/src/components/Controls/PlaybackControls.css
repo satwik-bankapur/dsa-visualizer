@@ -1,0 +1,242 @@
+/* components/Controls/PlaybackControls.css */
+.playback-controls {
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.no-steps {
+    text-align: center;
+    color: #64748b;
+    padding: 2rem;
+}
+
+.no-steps p {
+    margin: 0;
+    font-style: italic;
+}
+
+.controls-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.controls-header h3 {
+    color: #1f2937;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.step-counter {
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.step-counter .current {
+    color: #3b82f6;
+    font-size: 1.1rem;
+}
+
+.step-counter .separator {
+    color: #9ca3af;
+    margin: 0 0.5rem;
+}
+
+.step-counter .total {
+    color: #6b7280;
+}
+
+.progress-section {
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    overflow: visible;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progress-thumb {
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: #3b82f6;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.control-btn {
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 48px;
+}
+
+.control-btn:hover:not(:disabled) {
+    background: #f9fafb;
+    border-color: #9ca3af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.control-btn.play-pause {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+.control-btn.play-pause:hover:not(:disabled) {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+.control-btn.play-pause.playing {
+    background: #ef4444;
+    border-color: #ef4444;
+}
+
+.control-btn.play-pause.playing:hover:not(:disabled) {
+    background: #dc2626;
+    border-color: #dc2626;
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.speed-control label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+.speed-slider-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.speed-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    min-width: 30px;
+    text-align: center;
+}
+
+.speed-slider {
+    width: 120px;
+    height: 6px;
+    border-radius: 3px;
+    background: #e5e7eb;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.speed-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.speed-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.speed-value {
+    font-family: monospace;
+    font-weight: 600;
+    color: #3b82f6;
+    min-width: 50px;
+    text-align: right;
+    font-size: 0.85rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .playback-controls {
+        padding: 1rem;
+    }
+
+    .controls-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .control-buttons {
+        gap: 0.25rem;
+    }
+
+    .control-btn {
+        min-width: 42px;
+        height: 42px;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .speed-control {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .speed-slider-container {
+        order: 1;
+    }
+}

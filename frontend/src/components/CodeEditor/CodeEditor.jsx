@@ -1,118 +1,96 @@
-import React, { useState } from 'react';
+// components/CodeEditor/CodeEditor.jsx
+import React, { useRef, useEffect } from 'react';
 import './CodeEditor.css';
 
-const CodeEditor = ({ code, onChange, onVisualize, onClear, isAnalyzing }) => {
-    const [customArray, setCustomArray] = useState('1,3,5,7,9,11');
-    const [customTarget, setCustomTarget] = useState(7);
+const CodeEditor = ({ value, onChange, placeholder, readOnly = false }) => {
+    const textareaRef = useRef(null);
 
-    const handleVisualize = () => {
-        if (code.trim()) {
-            onVisualize(code, customArray, customTarget);
+    useEffect(() => {
+        const textarea = textareaRef.current;
+        if (textarea) {
+            // Auto-resize functionality
+            const adjustHeight = () => {
+                textarea.style.height = 'auto';
+                textarea.style.height = Math.max(200, textarea.scrollHeight) + 'px';
+            };
+
+            adjustHeight();
+            textarea.addEventListener('input', adjustHeight);
+
+            return () => textarea.removeEventListener('input', adjustHeight);
+        }
+    }, [value]);
+
+    const handleKeyDown = (e) => {
+        // Tab key functionality
+        if (e.key === 'Tab') {
+            e.preventDefault();
+            const start = e.target.selectionStart;
+            const end = e.target.selectionEnd;
+            const newValue = value.substring(0, start) + '    ' + value.substring(end);
+            onChange(newValue);
+
+            // Move cursor after the inserted spaces
+            setTimeout(() => {
+                e.target.selectionStart = e.target.selectionEnd = start + 4;
+            }, 0);
+        }
+
+        // Ctrl+A to select all
+        if ((e.ctrlKey || e.metaKey) && e.key === 'a') {
+            e.preventDefault();
+            e.target.select();
         }
     };
 
-    // Add this to your CodeEditor component
-    const handleCustomVisualize = () => {
-        const demoCode = `def binary_search(arr, target):
-    left, right = 0, len(arr) - 1
-    while left <= right:
-        mid = (left + right) // 2
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] < target:
-            left = mid + 1
-        else:
-            right = mid - 1
-    return -1
-
-# Test with: [${customArray}], target = ${customTarget}`;
-
-        onChange(demoCode);
-        onVisualize(demoCode, customArray, customTarget);
-    };
-
-
     return (
         <div className="code-editor">
-            <h2>📝 Paste Your Code Here:</h2>
-
-            <textarea
-                value={code}
-                onChange={(e) => onChange(e.target.value)}
-                placeholder={`Paste your LeetCode solution here...
-
-Example Binary Search:
-def binary_search(arr, target):
-    left, right = 0, len(arr) - 1
-    while left <= right:
-        mid = (left + right) // 2
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] < target:
-            left = mid + 1
-        else:
-            right = mid - 1
-    return -1
-
-# Test with: [1, 3, 5, 7, 9, 11], target = 7`}
-                className="code-input"
-                disabled={isAnalyzing}
-            />
-
-            <div className="button-group">
-                <button
-                    onClick={handleVisualize}
-                    disabled={!code.trim() || isAnalyzing}
-                    className="visualize-btn"
-                >
-                    {isAnalyzing ? '🔄 Analyzing...' : '🎯 Analyze & Visualize'}
-                </button>
-
-                <button
-                    onClick={onClear}
-                    disabled={isAnalyzing}
-                    className="clear-btn"
-                >
-                    🗑️ Clear
-                </button>
-            </div>
-
-            <div className="input-controls">
-                <h3>🎮 Interactive Controls</h3>
-
-                <div className="control-row">
-                    <div className="input-group">
-                        <label htmlFor="arrayInput">Custom Array:</label>
-                        <input
-                            id="arrayInput"
-                            type="text"
-                            value={customArray}
-                            onChange={(e) => setCustomArray(e.target.value)}
-                            placeholder="e.g., 1,3,5,7,9,11"
-                            disabled={isAnalyzing}
-                        />
-                    </div>
-
-                    <div className="input-group">
-                        <label htmlFor="targetInput">Target Value:</label>
-                        <input
-                            id="targetInput"
-                            type="number"
-                            value={customTarget}
-                            onChange={(e) => setCustomTarget(parseInt(e.target.value) || 0)}
-                            placeholder="e.g., 7"
-                            disabled={isAnalyzing}
-                        />
+            <div className="editor-header">
+                <div className="editor-tabs">
+                    <div className="tab active">
+                        <span className="tab-icon">🐍</span>
+                        <span>algorithm.py</span>
                     </div>
                 </div>
+                <div className="editor-actions">
+                    <button className="action-btn" title="Clear Code">
+                        🗑️
+                    </button>
+                    <button className="action-btn" title="Copy Code">
+                        📋
+                    </button>
+                </div>
+            </div>
 
-                <button
-                    onClick={handleCustomVisualize}
-                    disabled={isAnalyzing}
-                    className="custom-visualize-btn"
-                >
-                    ▶️ Run with Custom Data
-                </button>
+            <div className="editor-content">
+                <div className="line-numbers">
+                    {value.split('\n').map((_, index) => (
+                        <div key={index + 1} className="line-number">
+                            {index + 1}
+                        </div>
+                    ))}
+                </div>
+
+                <textarea
+                    ref={textareaRef}
+                    className="code-textarea"
+                    value={value}
+                    onChange={(e) => onChange(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                    placeholder={placeholder}
+                    readOnly={readOnly}
+                    spellCheck="false"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    autoCapitalize="off"
+                />
+            </div>
+
+            <div className="editor-footer">
+                <span className="language-indicator">Python</span>
+                <span className="cursor-position">
+          Ln {(value.substring(0, value.indexOf('\n')) || value).length}, Col 1
+        </span>
             </div>
         </div>
     );

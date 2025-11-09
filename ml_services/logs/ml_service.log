@@ -1,0 +1,900 @@
+2025-08-16 15:45:53,055 - __main__ - INFO - Starting server on port 8001
+2025-08-16 15:45:53,078 - __main__ - INFO - Starting ML Service
+2025-08-16 15:45:53,078 - __main__ - INFO - Environment: development
+2025-08-16 15:45:53,079 - __main__ - INFO - Log level: INFO
+2025-08-16 15:46:40,398 - __main__ - INFO - Health check requested
+2025-08-23 15:36:20,885 - __main__ - INFO - Starting server on port 8001
+2025-08-23 15:36:20,943 - __main__ - INFO - Starting ML Service
+2025-08-24 10:13:40,474 - __main__ - INFO - Starting server on port 8001
+2025-08-24 10:13:40,505 - __main__ - INFO - Starting ML Service
+2025-08-24 10:14:28,183 - __main__ - INFO - Health check requested
+2025-08-24 10:17:32,028 - __main__ - INFO - Starting server on port 8001
+2025-08-24 10:17:32,043 - __main__ - INFO - Starting ML Service
+2025-08-24 10:19:34,671 - __main__ - INFO - Health check requested
+2025-08-24 10:35:02,057 - __main__ - INFO - Starting server on port 8001
+2025-08-24 10:35:02,072 - __main__ - INFO - Starting ML Service
+2025-08-24 10:43:10,852 - api.analysis_router - INFO - New code analysis request received.
+2025-08-24 10:43:10,853 - api.analysis_router - ERROR - Unexpected error during analysis: 'list' object has no attribute 'strip'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 18, in analyze_code
+    processed_data = input_processor.process_input(
+        code=request.code_string,
+    ...<2 lines>...
+        test_cases=[tc.model_dump() for tc in request.test_cases] if request.test_cases else None
+    )
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 53, in process_input
+    parsed_problem = self.problem_parser.parse(problem_statement)
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\utils\parsers.py", line 10, in parse
+    title = self._extract_title(text)
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\utils\parsers.py", line 28, in _extract_title
+    return (first.split('.') or "Unknown Problem").strip()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'strip'
+2025-08-24 10:47:54,820 - __main__ - INFO - Starting server on port 8001
+2025-08-24 10:47:54,834 - __main__ - INFO - Starting ML Service
+2025-08-24 10:48:35,942 - api.analysis_router - INFO - New code analysis request received.
+2025-08-24 22:56:50,989 - __main__ - INFO - Starting server on port 8001
+2025-08-24 22:56:51,014 - __main__ - INFO - Starting ML Service
+2025-08-24 22:56:55,751 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:56:55,752 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:56:55,753 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,753 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,755 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-24 22:56:55,755 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP
+2025-08-24 22:56:55,759 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:56:55,759 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:56:55,760 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,760 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,761 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 1.00
+2025-08-24 22:56:55,761 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS
+2025-08-24 22:56:55,763 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:56:55,764 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:56:55,764 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,764 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,765 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 0.90
+2025-08-24 22:56:55,765 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP
+2025-08-24 22:56:55,768 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:56:55,768 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:56:55,769 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,769 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,770 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 1.00
+2025-08-24 22:56:55,770 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS
+2025-08-24 22:56:55,773 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:56:55,773 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:56:55,774 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,774 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,775 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH, Confidence: 1.00
+2025-08-24 22:56:55,775 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH
+2025-08-24 22:56:55,778 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:56:55,778 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:56:55,778 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,778 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,779 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-24 22:56:55,779 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP
+2025-08-24 22:56:55,781 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:56:55,781 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:56:55,782 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,782 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,783 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY, Confidence: 0.60
+2025-08-24 22:56:55,783 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY
+2025-08-24 22:56:55,786 - api.analysis_router - INFO - Debug analysis request received
+2025-08-24 22:56:55,786 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:56:55,787 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-24 22:56:55,788 - api.analysis_router - ERROR - Debug analysis failed: No module named 'ml_services'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 149, in debug_analysis
+    from ml_services.core.code_analyzer import CodeStructure
+ModuleNotFoundError: No module named 'ml_services'
+2025-08-24 22:57:06,942 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:57:06,942 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:57:06,943 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,943 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,944 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-24 22:57:06,944 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP
+2025-08-24 22:57:06,947 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:57:06,947 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:57:06,947 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,947 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,948 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 1.00
+2025-08-24 22:57:06,948 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS
+2025-08-24 22:57:06,951 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:57:06,951 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:57:06,951 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,952 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,952 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 0.90
+2025-08-24 22:57:06,953 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP
+2025-08-24 22:57:06,955 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:57:06,955 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:57:06,955 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,955 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,956 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 1.00
+2025-08-24 22:57:06,957 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS
+2025-08-24 22:57:06,959 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:57:06,959 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:57:06,959 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,959 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,960 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH, Confidence: 1.00
+2025-08-24 22:57:06,960 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH
+2025-08-24 22:57:06,962 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:57:06,963 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:57:06,963 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,963 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,964 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-24 22:57:06,964 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP
+2025-08-24 22:57:06,966 - api.analysis_router - INFO - New code analysis request received
+2025-08-24 22:57:06,966 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-24 22:57:06,967 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,967 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,968 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY, Confidence: 0.60
+2025-08-24 22:57:06,968 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY
+2025-08-24 22:57:06,971 - api.analysis_router - INFO - Debug analysis request received
+2025-08-24 22:57:06,971 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-24 22:57:06,972 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-24 22:57:06,972 - api.analysis_router - ERROR - Debug analysis failed: No module named 'ml_services'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 149, in debug_analysis
+    from ml_services.core.code_analyzer import CodeStructure
+ModuleNotFoundError: No module named 'ml_services'
+2025-08-25 14:40:48,043 - __main__ - INFO - Starting server on port 8001
+2025-08-25 14:40:48,079 - __main__ - INFO - Starting ML Service
+2025-08-25 14:40:59,635 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:40:59,635 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:40:59,637 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,637 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,638 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:40:59,639 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP
+2025-08-25 14:40:59,644 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:40:59,645 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:40:59,645 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,646 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,646 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 0.90
+2025-08-25 14:40:59,647 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS
+2025-08-25 14:40:59,651 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:40:59,651 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:40:59,652 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,652 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,653 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW, Confidence: 1.00
+2025-08-25 14:40:59,653 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW
+2025-08-25 14:40:59,656 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:40:59,656 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:40:59,657 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,657 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,658 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH, Confidence: 1.00
+2025-08-25 14:40:59,659 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH
+2025-08-25 14:40:59,663 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:40:59,663 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:40:59,664 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,664 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,665 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH, Confidence: 1.00
+2025-08-25 14:40:59,666 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH
+2025-08-25 14:40:59,669 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:40:59,669 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:40:59,670 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,670 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,671 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING, Confidence: 1.00
+2025-08-25 14:40:59,671 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING
+2025-08-25 14:40:59,675 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:40:59,675 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:40:59,676 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,676 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,682 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY, Confidence: 0.60
+2025-08-25 14:40:59,683 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY
+2025-08-25 14:40:59,687 - api.analysis_router - INFO - Debug analysis request received
+2025-08-25 14:40:59,688 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:40:59,689 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:40:59,689 - api.analysis_router - ERROR - Debug analysis failed: No module named 'ml_services'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 149, in debug_analysis
+    from ml_services.core.code_analyzer import CodeStructure
+ModuleNotFoundError: No module named 'ml_services'
+2025-08-25 14:44:38,195 - __main__ - INFO - Starting server on port 8001
+2025-08-25 14:44:38,219 - __main__ - INFO - Starting ML Service
+2025-08-25 14:44:42,812 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:44:42,812 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:44:42,815 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,815 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,816 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:44:42,817 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:44:42,841 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:44:42,841 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:44:42,842 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,842 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,844 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 0.90
+2025-08-25 14:44:42,844 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:44:42,851 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:44:42,851 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:44:42,852 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,852 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,854 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW, Confidence: 1.00
+2025-08-25 14:44:42,854 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:44:42,860 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:44:42,860 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:44:42,861 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,861 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,863 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH, Confidence: 1.00
+2025-08-25 14:44:42,864 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:44:42,870 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:44:42,870 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:44:42,872 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,872 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,873 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH, Confidence: 1.00
+2025-08-25 14:44:42,873 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:44:42,880 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:44:42,880 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:44:42,881 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,881 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,882 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING, Confidence: 1.00
+2025-08-25 14:44:42,883 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:44:42,888 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:44:42,888 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:44:42,890 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,890 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,891 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY, Confidence: 0.60
+2025-08-25 14:44:42,892 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:44:42,899 - api.analysis_router - INFO - Debug analysis request received
+2025-08-25 14:44:42,900 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:44:42,901 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:44:42,902 - api.analysis_router - ERROR - Debug analysis failed: No module named 'ml_services'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 149, in debug_analysis
+    from ml_services.core.code_analyzer import CodeStructure
+ModuleNotFoundError: No module named 'ml_services'
+2025-08-25 14:45:07,784 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:07,785 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:07,786 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,786 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,788 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:45:07,788 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:07,794 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:07,795 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:07,796 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,796 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,797 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 0.90
+2025-08-25 14:45:07,797 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:07,803 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:07,803 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:07,804 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,805 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,806 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW, Confidence: 1.00
+2025-08-25 14:45:07,806 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:07,812 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:07,812 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:07,813 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,813 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,815 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH, Confidence: 1.00
+2025-08-25 14:45:07,815 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:07,821 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:07,822 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:07,823 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,823 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,824 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH, Confidence: 1.00
+2025-08-25 14:45:07,825 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:07,830 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:07,830 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:07,832 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,832 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,833 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING, Confidence: 1.00
+2025-08-25 14:45:07,833 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:07,839 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:07,839 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:07,841 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,841 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,842 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY, Confidence: 0.60
+2025-08-25 14:45:07,843 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:07,849 - api.analysis_router - INFO - Debug analysis request received
+2025-08-25 14:45:07,850 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:07,852 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:45:07,852 - api.analysis_router - ERROR - Debug analysis failed: No module named 'ml_services'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 149, in debug_analysis
+    from ml_services.core.code_analyzer import CodeStructure
+ModuleNotFoundError: No module named 'ml_services'
+2025-08-25 14:45:39,385 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:39,386 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:39,386 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,387 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,388 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:45:39,388 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:39,393 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:39,393 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:39,394 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,394 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,395 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 0.90
+2025-08-25 14:45:39,395 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:39,399 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:39,399 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:39,400 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,400 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,401 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW, Confidence: 1.00
+2025-08-25 14:45:39,402 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:39,406 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:39,406 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:39,407 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,407 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,409 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH, Confidence: 1.00
+2025-08-25 14:45:39,410 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:39,415 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:39,415 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:39,416 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,416 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,417 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH, Confidence: 1.00
+2025-08-25 14:45:39,417 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:39,421 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:39,422 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:39,423 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,423 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,424 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING, Confidence: 1.00
+2025-08-25 14:45:39,424 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:39,429 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:39,429 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:39,430 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,430 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,431 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY, Confidence: 0.60
+2025-08-25 14:45:39,431 - api.analysis_router - ERROR - Unexpected error during analysis: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 79, in analyze_code
+    "problem_alignment": round(algorithm_analysis.problem_alignment, 3),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\DSA_Visualization_Tool_3\.venv\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'AlgorithmAnalysis' object has no attribute 'problem_alignment'. Did you mean: 'problem_alignment_score'?
+2025-08-25 14:45:39,436 - api.analysis_router - INFO - Debug analysis request received
+2025-08-25 14:45:39,437 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:39,438 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:45:39,439 - api.analysis_router - ERROR - Debug analysis failed: No module named 'ml_services'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 149, in debug_analysis
+    from ml_services.core.code_analyzer import CodeStructure
+ModuleNotFoundError: No module named 'ml_services'
+2025-08-25 14:45:47,793 - __main__ - INFO - Starting server on port 8001
+2025-08-25 14:45:47,812 - __main__ - INFO - Starting ML Service
+2025-08-25 14:45:51,091 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:51,091 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:51,093 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,093 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,094 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:45:51,094 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP
+2025-08-25 14:45:51,098 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:51,098 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:51,099 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,099 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,100 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 0.90
+2025-08-25 14:45:51,100 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS
+2025-08-25 14:45:51,104 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:51,104 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:51,105 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,106 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,107 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW, Confidence: 1.00
+2025-08-25 14:45:51,107 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW
+2025-08-25 14:45:51,110 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:51,110 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:51,111 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,111 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,112 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH, Confidence: 1.00
+2025-08-25 14:45:51,113 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH
+2025-08-25 14:45:51,116 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:51,116 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:51,117 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,117 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,118 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH, Confidence: 1.00
+2025-08-25 14:45:51,119 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH
+2025-08-25 14:45:51,123 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:51,123 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:51,124 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,124 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,125 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING, Confidence: 1.00
+2025-08-25 14:45:51,125 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING
+2025-08-25 14:45:51,128 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:45:51,128 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:45:51,129 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,129 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,131 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY, Confidence: 0.60
+2025-08-25 14:45:51,131 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY
+2025-08-25 14:45:51,136 - api.analysis_router - INFO - Debug analysis request received
+2025-08-25 14:45:51,137 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:45:51,138 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:45:51,138 - api.analysis_router - ERROR - Debug analysis failed: No module named 'ml_services'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 149, in debug_analysis
+    from ml_services.core.code_analyzer import CodeStructure
+ModuleNotFoundError: No module named 'ml_services'
+2025-08-25 14:48:27,582 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:27,582 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:27,583 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,584 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,585 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:48:27,585 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP
+2025-08-25 14:48:27,589 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:27,589 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:27,589 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,590 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,591 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 0.90
+2025-08-25 14:48:27,591 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS
+2025-08-25 14:48:27,594 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:27,594 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:27,595 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,595 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,597 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW, Confidence: 1.00
+2025-08-25 14:48:27,597 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW
+2025-08-25 14:48:27,601 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:27,601 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:27,601 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,601 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,603 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH, Confidence: 1.00
+2025-08-25 14:48:27,603 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH
+2025-08-25 14:48:27,607 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:27,607 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:27,608 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,608 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,609 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH, Confidence: 1.00
+2025-08-25 14:48:27,609 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH
+2025-08-25 14:48:27,613 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:27,614 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:27,614 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,614 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,615 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING, Confidence: 1.00
+2025-08-25 14:48:27,616 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING
+2025-08-25 14:48:27,619 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:27,619 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:27,620 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,620 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,621 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY, Confidence: 0.60
+2025-08-25 14:48:27,622 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY
+2025-08-25 14:48:27,626 - api.analysis_router - INFO - Debug analysis request received
+2025-08-25 14:48:27,627 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:27,628 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:48:27,629 - api.analysis_router - ERROR - Debug analysis failed: No module named 'ml_services'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 149, in debug_analysis
+    from ml_services.core.code_analyzer import CodeStructure
+ModuleNotFoundError: No module named 'ml_services'
+2025-08-25 14:48:42,587 - __main__ - INFO - Starting server on port 8001
+2025-08-25 14:48:42,605 - __main__ - INFO - Starting ML Service
+2025-08-25 14:48:48,497 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:48,497 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:48,499 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,499 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,500 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:48:48,500 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP
+2025-08-25 14:48:48,504 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:48,505 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:48,505 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,506 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,507 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 0.90
+2025-08-25 14:48:48,507 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS
+2025-08-25 14:48:48,511 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:48,511 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:48,511 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,512 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,513 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW, Confidence: 1.00
+2025-08-25 14:48:48,513 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW
+2025-08-25 14:48:48,517 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:48,517 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:48,518 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,518 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,520 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH, Confidence: 1.00
+2025-08-25 14:48:48,520 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH
+2025-08-25 14:48:48,524 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:48,525 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:48,526 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,526 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,528 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH, Confidence: 1.00
+2025-08-25 14:48:48,528 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH
+2025-08-25 14:48:48,533 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:48,533 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:48,534 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,535 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,536 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING, Confidence: 1.00
+2025-08-25 14:48:48,536 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING
+2025-08-25 14:48:48,540 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:48:48,541 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:48:48,541 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,542 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,543 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY, Confidence: 0.60
+2025-08-25 14:48:48,543 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY
+2025-08-25 14:48:48,548 - api.analysis_router - INFO - Debug analysis request received
+2025-08-25 14:48:48,549 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:48:48,550 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:48:48,551 - api.analysis_router - ERROR - Debug analysis failed: No module named 'ml_services'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 149, in debug_analysis
+    from ml_services.core.code_analyzer import CodeStructure
+ModuleNotFoundError: No module named 'ml_services'
+2025-08-25 14:49:24,138 - __main__ - INFO - Starting server on port 8001
+2025-08-25 14:49:24,159 - __main__ - INFO - Starting ML Service
+2025-08-25 14:49:27,875 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:49:27,876 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:49:27,877 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,878 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,879 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:49:27,879 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP
+2025-08-25 14:49:27,885 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:49:27,885 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:49:27,886 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,886 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,888 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 0.90
+2025-08-25 14:49:27,888 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS
+2025-08-25 14:49:27,893 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:49:27,893 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:49:27,894 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,894 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,895 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW, Confidence: 1.00
+2025-08-25 14:49:27,895 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.SLIDING_WINDOW
+2025-08-25 14:49:27,900 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:49:27,901 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:49:27,902 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,902 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,904 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH, Confidence: 1.00
+2025-08-25 14:49:27,904 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.BINARY_SEARCH
+2025-08-25 14:49:27,908 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:49:27,908 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:49:27,910 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,910 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,911 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH, Confidence: 1.00
+2025-08-25 14:49:27,911 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DEPTH_FIRST_SEARCH
+2025-08-25 14:49:27,916 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:49:27,917 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:49:27,918 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,918 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,919 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING, Confidence: 1.00
+2025-08-25 14:49:27,920 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.DYNAMIC_PROGRAMMING
+2025-08-25 14:49:27,924 - api.analysis_router - INFO - New code analysis request received
+2025-08-25 14:49:27,924 - api.analysis_router - INFO - Starting Phase 1: Input Processing & Validation
+2025-08-25 14:49:27,925 - api.analysis_router - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,925 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,927 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY, Confidence: 0.60
+2025-08-25 14:49:27,927 - api.analysis_router - INFO - Analysis complete. Pattern: AlgorithmPattern.GREEDY
+2025-08-25 14:49:27,933 - api.analysis_router - INFO - Debug analysis request received
+2025-08-25 14:49:27,934 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-08-25 14:49:27,935 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.HASH_MAP, Confidence: 1.00
+2025-08-25 14:49:27,935 - api.analysis_router - ERROR - Debug analysis failed: No module named 'ml_services'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\analysis_router.py", line 149, in debug_analysis
+    from ml_services.core.code_analyzer import CodeStructure
+ModuleNotFoundError: No module named 'ml_services'
+2025-08-26 08:47:26,193 - __main__ - INFO - Starting server on port 8001
+2025-08-26 08:47:26,238 - __main__ - INFO - Starting ML Service
+2025-08-27 07:53:03,309 - __main__ - INFO - Starting server on port 8001
+2025-08-27 07:53:03,333 - __main__ - INFO - Starting ML Service
+2025-08-28 15:21:39,211 - __main__ - INFO - Starting server on port 8001
+2025-08-28 15:21:39,226 - __main__ - INFO - Starting ML Service
+2025-08-28 19:13:21,939 - __main__ - INFO - Starting server on port 8001
+2025-08-28 19:13:21,961 - __main__ - INFO - Starting ML Service
+2025-08-30 11:16:13,562 - __main__ - INFO - Starting server on port 8001
+2025-08-30 11:16:13,575 - __main__ - INFO - Starting ML Service
+2025-08-31 08:25:42,742 - __main__ - INFO - Starting server on port 8001
+2025-08-31 08:25:42,759 - __main__ - INFO - Starting ML Service
+2025-09-03 07:22:02,775 - __main__ - INFO - Starting server on port 8001
+2025-09-03 07:22:02,801 - __main__ - INFO - Starting ML Service
+2025-09-03 07:22:09,015 - __main__ - INFO - Health check requested
+2025-09-03 07:22:09,018 - __main__ - INFO - Health check requested
+2025-09-04 07:05:26,067 - __main__ - INFO - Starting server on port 8001
+2025-09-04 07:05:26,086 - __main__ - INFO - Starting ML Service
+2025-09-04 07:05:43,798 - __main__ - INFO - Health check requested
+2025-09-04 07:05:43,801 - __main__ - INFO - Health check requested
+2025-09-04 07:17:21,847 - __main__ - INFO - Health check requested
+2025-09-04 07:18:22,979 - __main__ - INFO - Health check requested
+2025-09-04 07:18:22,981 - __main__ - INFO - Health check requested
+2025-09-04 07:18:23,757 - __main__ - INFO - Health check requested
+2025-09-04 07:18:23,760 - __main__ - INFO - Health check requested
+2025-09-04 07:18:23,994 - api.unified_router - INFO - Unified analysis request received
+2025-09-04 07:18:23,994 - api.unified_router - ERROR - Analysis failed: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\unified_router.py", line 61, in analyze_code_unified
+    processed_data = input_processor.process_input(
+        code=request.code,
+    ...<2 lines>...
+        test_cases=[]
+    )
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 32, in process_input
+    validation_errors.extend(self._validate_input_reception(code, problem_statement, language))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 78, in _validate_input_reception
+    if language.value not in self.supported_languages:
+       ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'value'
+2025-09-04 07:18:25,113 - api.unified_router - INFO - Unified analysis request received
+2025-09-04 07:18:25,113 - api.unified_router - ERROR - Analysis failed: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\unified_router.py", line 61, in analyze_code_unified
+    processed_data = input_processor.process_input(
+        code=request.code,
+    ...<2 lines>...
+        test_cases=[]
+    )
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 32, in process_input
+    validation_errors.extend(self._validate_input_reception(code, problem_statement, language))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 78, in _validate_input_reception
+    if language.value not in self.supported_languages:
+       ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'value'
+2025-09-04 07:18:56,551 - __main__ - INFO - Health check requested
+2025-09-04 07:24:19,737 - api.unified_router - INFO - Unified analysis request received
+2025-09-04 07:24:19,738 - api.unified_router - ERROR - Analysis failed: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\unified_router.py", line 61, in analyze_code_unified
+    processed_data = input_processor.process_input(
+        code=request.code,
+    ...<2 lines>...
+        test_cases=[]
+    )
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 32, in process_input
+    validation_errors.extend(self._validate_input_reception(code, problem_statement, language))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 78, in _validate_input_reception
+    if language.value not in self.supported_languages:
+       ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'value'
+2025-09-04 07:25:36,036 - api.unified_router - INFO - Unified analysis request received
+2025-09-04 07:25:36,037 - api.unified_router - ERROR - Analysis failed: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\unified_router.py", line 61, in analyze_code_unified
+    processed_data = input_processor.process_input(
+        code=request.code,
+    ...<2 lines>...
+        test_cases=[]
+    )
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 32, in process_input
+    validation_errors.extend(self._validate_input_reception(code, problem_statement, language))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 78, in _validate_input_reception
+    if language.value not in self.supported_languages:
+       ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'value'
+2025-09-04 07:25:49,578 - api.unified_router - INFO - Unified analysis request received
+2025-09-04 07:25:49,579 - api.unified_router - ERROR - Analysis failed: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\unified_router.py", line 61, in analyze_code_unified
+    processed_data = input_processor.process_input(
+        code=request.code,
+    ...<2 lines>...
+        test_cases=[]
+    )
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 32, in process_input
+    validation_errors.extend(self._validate_input_reception(code, problem_statement, language))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 78, in _validate_input_reception
+    if language.value not in self.supported_languages:
+       ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'value'
+2025-09-04 07:26:23,364 - __main__ - INFO - Starting server on port 8001
+2025-09-04 07:26:23,371 - __main__ - INFO - Starting ML Service
+2025-09-06 07:41:11,233 - __main__ - INFO - Starting server on port 8001
+2025-09-06 07:41:11,246 - __main__ - INFO - Starting ML Service
+2025-09-06 07:41:15,671 - __main__ - INFO - Health check requested
+2025-09-06 07:41:15,674 - __main__ - INFO - Health check requested
+2025-09-06 07:41:18,191 - api.unified_router - INFO - Unified analysis request received
+2025-09-06 07:41:18,191 - api.unified_router - ERROR - Analysis failed: 'str' object has no attribute 'value'
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\unified_router.py", line 61, in analyze_code_unified
+    processed_data = input_processor.process_input(
+        code=request.code,
+    ...<2 lines>...
+        test_cases=[]
+    )
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 32, in process_input
+    validation_errors.extend(self._validate_input_reception(code, problem_statement, language))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\input_processor.py", line 78, in _validate_input_reception
+    if language.value not in self.supported_languages:
+       ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'value'
+2025-09-06 07:54:36,924 - __main__ - INFO - Starting server on port 8001
+2025-09-06 07:54:36,933 - __main__ - INFO - Starting ML Service
+2025-09-06 07:54:36,945 - __main__ - INFO - Health check requested
+2025-09-06 07:54:36,948 - __main__ - INFO - Health check requested
+2025-09-06 07:58:12,101 - __main__ - INFO - Health check requested
+2025-09-06 07:58:12,104 - __main__ - INFO - Health check requested
+2025-09-06 07:58:37,429 - __main__ - INFO - Health check requested
+2025-09-06 07:58:37,431 - __main__ - INFO - Health check requested
+2025-09-06 08:01:46,079 - __main__ - INFO - Health check requested
+2025-09-06 08:01:46,760 - __main__ - INFO - Health check requested
+2025-09-06 08:01:49,754 - __main__ - INFO - Health check requested
+2025-09-06 08:03:04,023 - __main__ - INFO - Health check requested
+2025-09-06 08:03:04,026 - __main__ - INFO - Health check requested
+2025-09-06 08:03:29,847 - __main__ - INFO - Health check requested
+2025-09-06 08:03:29,848 - __main__ - INFO - Health check requested
+2025-09-06 08:04:07,066 - __main__ - INFO - Health check requested
+2025-09-06 08:04:10,756 - __main__ - INFO - Health check requested
+2025-09-06 08:04:24,768 - __main__ - INFO - Health check requested
+2025-09-06 08:26:51,868 - __main__ - INFO - Health check requested
+2025-09-06 08:26:51,871 - __main__ - INFO - Health check requested
+2025-09-06 08:27:31,501 - __main__ - INFO - Health check requested
+2025-09-06 08:27:31,504 - __main__ - INFO - Health check requested
+2025-09-06 08:27:32,679 - api.unified_router - INFO - Unified analysis request received
+2025-09-06 08:27:32,682 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-09-06 08:27:32,692 - core.code_analyzer - INFO - AI detected pattern: AlgorithmPattern.TWO_POINTERS (confidence: 0.790)
+2025-09-06 08:27:32,692 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 0.79
+2025-09-06 08:27:32,693 - core.code_analyzer - INFO - Skipping Phase 3: No pattern detected or no test case available
+2025-09-06 08:27:32,693 - core.execution_simulator - INFO - Starting Phase 3+4 execution simulation for pattern: AlgorithmPattern.TWO_POINTERS
+2025-09-06 08:27:32,693 - api.unified_router - ERROR - Analysis failed: No test case selected for execution
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\unified_router.py", line 78, in analyze_code_unified
+    execution_results = execution_simulator.simulate_execution(
+        processed_data,
+        algorithm_analysis.primary_pattern
+    )
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\execution_simulator.py", line 35, in simulate_execution
+    raise ValueError("No test case selected for execution")
+ValueError: No test case selected for execution
+2025-09-06 08:27:33,420 - api.unified_router - INFO - Unified analysis request received
+2025-09-06 08:27:33,421 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-09-06 08:27:33,429 - core.code_analyzer - INFO - AI detected pattern: AlgorithmPattern.TWO_POINTERS (confidence: 0.790)
+2025-09-06 08:27:33,429 - core.code_analyzer - INFO - Analysis complete. Pattern: AlgorithmPattern.TWO_POINTERS, Confidence: 0.79
+2025-09-06 08:27:33,429 - core.code_analyzer - INFO - Skipping Phase 3: No pattern detected or no test case available
+2025-09-06 08:27:33,430 - core.execution_simulator - INFO - Starting Phase 3+4 execution simulation for pattern: AlgorithmPattern.TWO_POINTERS
+2025-09-06 08:27:33,430 - api.unified_router - ERROR - Analysis failed: No test case selected for execution
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\unified_router.py", line 78, in analyze_code_unified
+    execution_results = execution_simulator.simulate_execution(
+        processed_data,
+        algorithm_analysis.primary_pattern
+    )
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\execution_simulator.py", line 35, in simulate_execution
+    raise ValueError("No test case selected for execution")
+ValueError: No test case selected for execution
+2025-09-06 08:27:46,144 - __main__ - INFO - Health check requested
+2025-09-06 08:28:00,696 - api.unified_router - INFO - Unified analysis request received
+2025-09-06 08:28:00,697 - core.code_analyzer - INFO - Starting Phase 2: Code Understanding & Pattern Recognition
+2025-09-06 08:28:00,703 - core.code_analyzer - INFO - Using rule-based pattern matching as fallback
+2025-09-06 08:28:00,704 - core.code_analyzer - INFO - Analysis complete. Pattern: None, Confidence: 0.00
+2025-09-06 08:28:00,704 - core.code_analyzer - INFO - Skipping Phase 3: No pattern detected or no test case available
+2025-09-06 08:28:00,704 - core.execution_simulator - INFO - Starting Phase 3+4 execution simulation for pattern: None
+2025-09-06 08:28:00,704 - api.unified_router - ERROR - Analysis failed: No test case selected for execution
+Traceback (most recent call last):
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\api\unified_router.py", line 78, in analyze_code_unified
+    execution_results = execution_simulator.simulate_execution(
+        processed_data,
+        algorithm_analysis.primary_pattern
+    )
+  File "C:\Users\satwi\WebstormProjects\dsa-visualizer\ml_services\core\execution_simulator.py", line 35, in simulate_execution
+    raise ValueError("No test case selected for execution")
+ValueError: No test case selected for execution
+2025-09-06 08:28:30,758 - __main__ - INFO - Health check requested
+2025-09-06 08:28:47,065 - __main__ - INFO - Health check requested
+2025-09-06 08:29:04,185 - __main__ - INFO - Health check requested
+2025-09-06 08:29:04,186 - __main__ - INFO - Health check requested
+2025-09-06 08:30:03,758 - __main__ - INFO - Health check requested
+2025-09-06 08:31:33,463 - __main__ - INFO - Health check requested
+2025-09-06 08:31:33,465 - __main__ - INFO - Health check requested

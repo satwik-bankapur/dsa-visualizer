@@ -1,0 +1,339 @@
+/* components/VisualizationEngine/TreeVisualizer.css */
+.tree-visualizer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.tree-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+}
+
+.tree-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tree-icon {
+    font-size: 1.2rem;
+}
+
+.tree-info h4 {
+    margin: 0;
+    color: #166534;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.traversal-type .algorithm-badge {
+    background: #166534;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.tree-container {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2rem;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: auto;
+}
+
+.no-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    color: #9ca3af;
+    text-align: center;
+}
+
+.no-tree-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.no-tree p {
+    margin: 0;
+    font-style: italic;
+}
+
+/* Tree Node Structure */
+.tree-node-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.node-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tree-node {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #e5e7eb;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.tree-node:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.tree-node.highlighted {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.tree-node.current {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border-width: 4px;
+    animation: pulse 2s infinite;
+}
+
+.tree-node.visited {
+    border-color: #10b981;
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    opacity: 0.8;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.node-value {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #1f2937;
+}
+
+.current-indicator {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+/* Tree Structure Layout */
+.children-container {
+    position: relative;
+}
+
+.children {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    position: relative;
+}
+
+.child-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.connection-line {
+    width: 2px;
+    height: 30px;
+    background: #9ca3af;
+    position: relative;
+}
+
+.connection-line::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 30px;
+    background: #9ca3af;
+}
+
+.left-branch .connection-line::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 2rem;
+    height: 2px;
+    background: #9ca3af;
+    transform: translateX(-50%);
+}
+
+.right-branch .connection-line::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 50%;
+    width: 2rem;
+    height: 2px;
+    background: #9ca3af;
+    transform: translateX(50%);
+}
+
+/* Traversal Information */
+.traversal-info {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border: 1px solid #fbbf24;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.traversal-info h4 {
+    margin: 0 0 1rem 0;
+    color: #92400e;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.traversal-sequence {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.traversal-item {
+    background: white;
+    border: 2px solid #f59e0b;
+    border-radius: 20px;
+    padding: 0.5rem 0.75rem;
+    font-weight: 700;
+    color: #92400e;
+    font-size: 0.9rem;
+    min-width: 35px;
+    text-align: center;
+}
+
+/* Algorithm Explanation */
+.algorithm-explanation {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.explanation-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.info-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.explanation-text {
+    flex: 1;
+}
+
+.explanation-text p {
+    margin: 0;
+    color: #0c4a6e;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.explanation-text strong {
+    color: #0369a1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tree-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .tree-container {
+        padding: 1rem;
+        min-height: 300px;
+    }
+
+    .tree-node {
+        width: 40px;
+        height: 40px;
+    }
+
+    .node-value {
+        font-size: 0.8rem;
+    }
+
+    .children {
+        gap: 2rem;
+    }
+
+    .current-indicator {
+        left: -25px;
+        font-size: 1rem;
+    }
+
+    .traversal-sequence {
+        justify-content: center;
+    }
+
+    .explanation-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tree-node {
+        width: 35px;
+        height: 35px;
+    }
+
+    .node-value {
+        font-size: 0.75rem;
+    }
+
+    .children {
+        gap: 1.5rem;
+    }
+
+    .traversal-item {
+        min-width: 30px;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
